@@ -8,13 +8,13 @@ Projekt zawiera REST API wykonane w podejściu EF Core Database First.
 1. Uruchom SQL Server:
 
 ```powershell
-docker run -e "ACCEPT_EULA=Y" -e "MSSQL_SA_PASSWORD=YourStrongPassword123!" -p 14333:1433 --name apbd_lecture9_db_first -d mcr.microsoft.com/mssql/server:2022-latest
+docker compose up -d
 ```
 
-Jeżeli kontener już istnieje:
+Jeżeli nie używasz Docker Compose, uruchom kontener ręcznie:
 
 ```powershell
-docker start apbd_lecture9_db_first
+docker run -e "ACCEPT_EULA=Y" -e "MSSQL_SA_PASSWORD=YourStrongPassword123!" -p 14333:1433 --name apbd_lecture9_db_first -d mcr.microsoft.com/mssql/server:2022-latest
 ```
 
 2. Wykonaj skrypt bazy:
