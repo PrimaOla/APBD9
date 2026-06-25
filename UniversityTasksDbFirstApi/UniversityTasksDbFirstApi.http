@@ -1,6 +1,41 @@
 @UniversityTasksDbFirstApi_HostAddress = http://localhost:5287
 
-GET {{UniversityTasksDbFirstApi_HostAddress}}/weatherforecast/
+GET {{UniversityTasksDbFirstApi_HostAddress}}/api/courses
 Accept: application/json
+
+###
+
+GET {{UniversityTasksDbFirstApi_HostAddress}}/api/courses/1/assignments
+Accept: application/json
+
+###
+
+GET {{UniversityTasksDbFirstApi_HostAddress}}/api/students/5/dashboard
+Accept: application/json
+
+###
+
+POST {{UniversityTasksDbFirstApi_HostAddress}}/api/submissions
+Content-Type: application/json
+
+{
+  "assignmentId": 3,
+  "studentId": 5,
+  "repositoryUrl": "https://github.com/student/performance-review"
+}
+
+###
+
+PUT {{UniversityTasksDbFirstApi_HostAddress}}/api/submissions/14/grade
+Content-Type: application/json
+
+{
+  "score": 23,
+  "feedback": "Correct use of projections and AsNoTracking."
+}
+
+###
+
+DELETE {{UniversityTasksDbFirstApi_HostAddress}}/api/submissions/14
 
 ###
